@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "ToDoList";
+}
+
+
+<form class="row g-3">
+    <h3>To Do</h3>
+    <div class="col">
+        <input type="text" class="form-control" id="inputPassword2" placeholder="Add Task...">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">+</button>
+    </div>
+</form>
+
+
+
+
+<ul class="list-group">
+
+    <h6>My Tasks</h6>
+    
+    @{
+        string[] Frutas = { "Banana", "Uva", "Maçã" };
+
+    }
+        @foreach (var Fruta in Frutas)
+        {
+           <li class="list-group-item"> 
+           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+           @Fruta
+           <button type="button" class="btn btn-outline-danger">Delete</button>
+           </li>
+        }
+</ul>
+
+
